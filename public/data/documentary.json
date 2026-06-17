@@ -1,18 +1,122 @@
-[
-  {
-    "title": "Introducción",
-    "text": "El café ha sido parte fundamental..."
+{
+  "title": "La Cultura del Café",
+  "subtitle": "Del grano de oro a símbolo de identidad nacional",
+  "hero": {
+    "eyebrow": "Costa Rica",
+    "videoSrc": "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4",
+    "poster": "https://placehold.co/1600x900/5c3b1e/f7f5f2?text=Historia+del+Caf%C3%A9"
   },
-  {
-    "title": "Historia del café",
-    "text": "El cultivo del café comenzó..."
-  },
-  {
-    "title": "Impacto económico",
-    "text": "Durante muchos años..."
-  },
-  {
-    "title": "Tradición cultural",
-    "text": "Tomar café forma parte..."
+  "sections": [
+    {
+      "id": 1,
+      "title": "El nacimiento del café en Costa Rica",
+      "content": "El café llegó a Costa Rica a finales del siglo XVIII y comenzó a cultivarse de forma más amplia durante el siglo XIX. Gracias a las condiciones climáticas favorables, los suelos volcánicos y la dedicación de los agricultores, el cultivo se expandió rápidamente por el Valle Central. Con el paso de los años, el café se convirtió en uno de los pilares de la economía nacional y ayudó a conectar al país con los mercados internacionales.",
+      "highlight": "El café transformó una pequeña nación agrícola en un país conectado con el comercio internacional.",
+      "audio": {
+        "src": "https://interactive-examples.mdn.mozilla.net/media/cc0-audio/t-rex-roar.mp3",
+        "description": "Narración breve sobre la llegada y expansión del café en Costa Rica."
+      }
+    },
+    {
+      "id": 2,
+      "title": "El grano de oro",
+      "content": "Durante gran parte del siglo XIX y principios del XX, el café fue el principal producto de exportación de Costa Rica. Los ingresos generados por su comercialización contribuyeron al desarrollo de infraestructura, educación y servicios públicos. Debido a su enorme importancia económica, el café recibió el apodo de 'grano de oro'.",
+      "highlight": "El café fue conocido como el 'grano de oro' por su enorme aporte al desarrollo nacional.",
+      "audio": {
+        "src": "https://interactive-examples.mdn.mozilla.net/media/cc0-audio/t-rex-roar.mp3",
+        "description": "Narración sobre el papel del café en la economía costarricense."
+      }
+    },
+    {
+      "id": 3,
+      "title": "Del cafetal a la taza",
+      "content": "La producción del café es un proceso que requiere tiempo, conocimiento y esfuerzo. Todo comienza con la siembra y el crecimiento de las plantas. Luego sigue la recolección de los frutos maduros, el beneficiado para separar el grano, el secado, el tostado y finalmente la preparación de la bebida. Cada etapa influye directamente en la calidad del producto final.",
+      "highlight": "Cada taza de café representa meses de trabajo y dedicación.",
+      "audio": {
+        "src": "https://interactive-examples.mdn.mozilla.net/media/cc0-audio/t-rex-roar.mp3",
+        "description": "Narración del recorrido productivo desde el cafetal hasta la taza."
+      }
+    },
+    {
+      "id": 4,
+      "title": "El café como tradición cultural",
+      "content": "El café forma parte de la vida cotidiana de los costarricenses. Está presente en reuniones familiares, encuentros sociales y actividades laborales. Tradiciones como el uso del chorreador reflejan la importancia cultural de esta bebida. Más allá de su valor económico, el café representa hospitalidad, convivencia e identidad nacional.",
+      "highlight": "Más que una bebida, el café es una expresión de la identidad costarricense.",
+      "audio": {
+        "src": "https://interactive-examples.mdn.mozilla.net/media/cc0-audio/t-rex-roar.mp3",
+        "description": "Narración sobre las costumbres y tradiciones alrededor del café."
+      }
+    },
+    {
+      "id": 5,
+      "title": "El café hoy y el futuro",
+      "content": "Actualmente Costa Rica es reconocida por la producción de cafés de alta calidad y especialidad. Los productores han incorporado prácticas sostenibles e innovación tecnológica para enfrentar desafíos como el cambio climático y la competencia internacional. El futuro del sector depende de mantener el equilibrio entre tradición, calidad y sostenibilidad.",
+      "highlight": "El futuro del café costarricense depende de la innovación y la sostenibilidad.",
+      "audio": {
+        "src": "https://interactive-examples.mdn.mozilla.net/media/cc0-audio/t-rex-roar.mp3",
+        "description": "Narración sobre sostenibilidad, innovación y futuro del café."
+      }
+    }
+  ],
+  "gallery": [
+    {
+      "src": "https://placehold.co/1200x800/6a4a2f/f7f5f2?text=Cafetal+1",
+      "alt": "Vista de cafetales en Costa Rica",
+      "title": "Cafetales del Valle Central",
+      "credit": "créditos",
+      "license": "licencia"
+    },
+    {
+      "src": "https://placehold.co/1200x800/8a5b39/f7f5f2?text=Cafetal+2",
+      "alt": "Recolecta de café",
+      "title": "Cosecha manual",
+      "credit": "créditos",
+      "license": "licencia"
+    },
+    {
+      "src": "https://placehold.co/1200x800/4d3621/f7f5f2?text=Cafetal+3",
+      "alt": "Granos de café",
+      "title": "Selección del grano",
+      "credit": "créditos",
+      "license": "licencia"
+    },
+    {
+      "src": "https://placehold.co/1200x800/7d5a44/f7f5f2?text=Cafetal+4",
+      "alt": "Tostado del café",
+      "title": "Tostado artesanal",
+      "credit": "créditos",
+      "license": "licencia"
+    },
+    {
+      "src": "https://placehold.co/1200x800/5c3b1e/f7f5f2?text=Cafetal+5",
+      "alt": "Chorreador costarricense",
+      "title": "Tradición del chorreador",
+      "credit": "créditos",
+      "license": "licencia"
+    },
+    {
+      "src": "https://placehold.co/1200x800/9b6a44/f7f5f2?text=Cafetal+6",
+      "alt": "Taza de café costarricense",
+      "title": "La taza final",
+      "credit": "créditos",
+      "license": "licencia"
+    },
+    {
+      "src": "https://placehold.co/1200x800/3f2a1a/f7f5f2?text=Cafetal+7",
+      "alt": "Paisaje rural cafetero",
+      "title": "Paisaje cafetero",
+      "credit": "créditos",
+      "license": "licencia"
+    },
+    {
+      "src": "https://placehold.co/1200x800/a1714b/f7f5f2?text=Cafetal+8",
+      "alt": "Café de especialidad",
+      "title": "Café de especialidad",
+      "credit": "créditos",
+      "license": "licencia"
+    }
+  ],
+  "footer": {
+    "text": "Kristel Córdoba Carrillo, Liberia, Guanacaste."
   }
-]
+}
