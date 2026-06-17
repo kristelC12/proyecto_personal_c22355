@@ -109,8 +109,8 @@ const footer = computed(() => documentary.value?.footer ?? {})
                 :ref="setSectionRef(index)"
                 :class="['section', 'documentary-section', 'hidden', { show: visibility.sections[index] }]">
                 <div class="section-content">
-                    <DocumentarySection :index="section.id" :title="section.title" :image="section.image"
-                        :content="section.content" :highlight="section.highlight" />
+                    <DocumentarySection :index="section.id" :title="section.title" :image="section.img?.src"
+                        :alt="section.img?.alt" :content="section.content" :highlight="section.highlight" />
 
                     <DocumentaryAudio :title="section.title"
                         :description="section.audio?.description || section.highlight"
@@ -123,8 +123,8 @@ const footer = computed(() => documentary.value?.footer ?? {})
             </div>
 
             <div :class="['hidden', { show: visibility.footer }]">
-                <DocumentaryFooter
-                    :text="footer.text || 'Kristel Córdoba Carrillo, Liberia, Guanacaste - Mini documental interactivo'" />
+                <DocumentaryFooter :text="footer.text || ''" :author="footer.author || ''"
+                    :sources="footer.sources || []" />
             </div>
         </template>
     </main>

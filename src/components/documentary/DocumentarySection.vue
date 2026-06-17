@@ -24,28 +24,47 @@ defineProps({
 </script>
 
 <template>
-    <article>
-        <img v-if="image" :src="image" :alt="title" class="documentary-section-image" />
-        <h2>{{ title }}</h2>
-        <p>{{ content }}</p>
-        <p v-if="highlight" class="highlight">{{ highlight }}</p>
+    <article class="documentary-section">
+        <div class="documentary-section__text">
+            <h2>{{ title }}</h2>
+            <p>{{ content }}</p>
+            <p v-if="highlight" class="highlight">{{ highlight }}</p>
+        </div>
+
+        <img v-if="image" :src="image" :alt="title" class="documentary-section__image" />
     </article>
 </template>
 
-<style scoped>
-.documentary-section__kicker {
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
-    font-size: 0.8rem;
-    color: var(--secondary-color);
-    margin-bottom: 0.75rem;
 
-    /**
-     * width: 100%;
-    max-height: 500px;
+<style scoped>
+.documentary-section {
+    display: flex;
+    gap: 2.5rem;
+    align-items: flex-start;
+}
+
+.documentary-section__text {
+    flex: 1;
+}
+
+.documentary-section__image {
+    width: 380px;
+    max-width: 45%;
+    height: 100%;
     object-fit: cover;
-    border-radius: 16px;
-    margin-bottom: 2rem;
-     */
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+    .documentary-section {
+        flex-direction: column;
+    }
+
+    .documentary-section__image {
+        width: 100%;
+        max-width: 100%;
+        height: 220px;
+    }
 }
 </style>

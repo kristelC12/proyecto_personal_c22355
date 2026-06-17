@@ -4,12 +4,22 @@ defineProps({
         type: String,
         required: true,
     },
+    author: {
+        type: String,
+        required: true,
+    },
+    sources: {
+        type: Array,
+        required: true,
+    }
 })
 </script>
 
 <template>
     <footer class="footer documentary-footer">
         <p>{{ text }}</p>
+        <p>Autor: {{ author }}</p>
+        <p>Fuentes: {{ sources.join(', ') }}</p>
     </footer>
 </template>
 
