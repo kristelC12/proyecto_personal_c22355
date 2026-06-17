@@ -56,6 +56,12 @@
         "src": "https://interactive-examples.mdn.mozilla.net/media/cc0-audio/t-rex-roar.mp3",
         "description": "Narración sobre sostenibilidad, innovación y futuro del café."
       }
+    },
+    {
+      "id": 6,
+      "title": "El legado del café costarricense",
+      "content": "Durante más de dos siglos, el café ha acompañado el desarrollo de Costa Rica. Su impacto económico, social y cultural lo convierte en uno de los símbolos más importantes de la identidad nacional.",
+      "highlight": "El café costarricense sigue siendo parte esencial de la memoria y la identidad del país."
     }
   ],
   "gallery": [
@@ -116,7 +122,10 @@
       "license": "licencia"
     }
   ],
+
   "footer": {
-    "text": "Kristel Córdoba Carrillo, Liberia, Guanacaste."
+    "text": "Universidad de Costa Rica - Sede de Guanacaste",
+    "author": "Tu nombre",
+    "sources": ["Instituto del Café de Costa Rica", "Museo Nacional de Costa Rica"]
   }
 }

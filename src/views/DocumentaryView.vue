@@ -1,21 +1,21 @@
 <script setup>
-import { computed, nextTick, onBeforeUnmount, onMounted, reactive, ref } from 'vue'
+import { computed, nextTick, onMounted, reactive, ref } from 'vue'
 import DocumentaryAudio from '../components/documentary/DocumentaryAudio.vue'
 import DocumentaryFooter from '../components/documentary/DocumentaryFooter.vue'
 import DocumentaryGallery from '../components/documentary/DocumentaryGallery.vue'
 import DocumentaryHero from '../components/documentary/DocumentaryHero.vue'
 import DocumentarySection from '../components/documentary/DocumentarySection.vue'
+import { useScrollReveal } from '../composables/useScrollReveal'
+
 
 const documentary = ref(null)
 const loading = ref(true)
 const error = ref('')
 
-const heroRef = ref(null)
 const sectionRefs = ref([])
 const galleryRef = ref(null)
 
 const visibility = reactive({
-    hero: false,
     sections: [],
     gallery: false,
     footer: false,
@@ -33,11 +33,6 @@ const setSectionRef = (index) => (element) => {
 const applyVisibility = () => {
     const viewportHeight = window.innerHeight || document.documentElement.clientHeight
     const revealPoint = viewportHeight * 0.8
-
-    if (heroRef.value) {
-        const heroRect = heroRef.value.getBoundingClientRect()
-        visibility.hero = heroRect.top < revealPoint && heroRect.bottom > 0
-    }
 
     sectionRefs.value.forEach((element, index) => {
         if (!element) {
@@ -59,6 +54,8 @@ const applyVisibility = () => {
         visibility.footer = scrollBottom >= pageHeight - 180
     }
 }
+
+useScrollReveal(applyVisibility)
 
 const loadDocumentary = async () => {
     loading.value = true
@@ -87,14 +84,9 @@ const loadDocumentary = async () => {
 
 onMounted(() => {
     loadDocumentary()
-    window.addEventListener('scroll', applyVisibility, { passive: true })
-    window.addEventListener('resize', applyVisibility)
 })
 
-onBeforeUnmount(() => {
-    window.removeEventListener('scroll', applyVisibility)
-    window.removeEventListener('resize', applyVisibility)
-})
+
 
 const sections = computed(() => documentary.value?.sections ?? [])
 const gallery = computed(() => documentary.value?.gallery ?? [])
@@ -110,16 +102,15 @@ const footer = computed(() => documentary.value?.footer ?? {})
         <div v-else-if="error" class="documentary-state documentary-state--error">{{ error }}</div>
 
         <template v-else-if="documentary">
-            <div ref="heroRef" :class="['hidden', { show: visibility.hero }]">
-                <DocumentaryHero :eyebrow="hero.eyebrow" :title="title" :subtitle="subtitle"
-                    :video-src="hero.videoSrc || fallbackVideo" :poster="hero.poster || ''" />
-            </div>
+            <DocumentaryHero :eyebrow="hero.eyebrow" :title="title" :subtitle="subtitle"
+                :video-src="hero.videoSrc || fallbackVideo" :poster="hero.poster || ''" />
 
-            <section v-for="(section, index) in sections" :key="section.id" :ref="setSectionRef(index)"
+            <section v-for="(section, index) in sections" :key="section.id" :id="`section-${section.id}`"
+                :ref="setSectionRef(index)"
                 :class="['section', 'documentary-section', 'hidden', { show: visibility.sections[index] }]">
                 <div class="section-content">
-                    <DocumentarySection :index="section.id" :title="section.title" :content="section.content"
-                        :highlight="section.highlight" />
+                    <DocumentarySection :index="section.id" :title="section.title" :image="section.image"
+                        :content="section.content" :highlight="section.highlight" />
 
                     <DocumentaryAudio :title="section.title"
                         :description="section.audio?.description || section.highlight"
@@ -132,7 +123,8 @@ const footer = computed(() => documentary.value?.footer ?? {})
             </div>
 
             <div :class="['hidden', { show: visibility.footer }]">
-                <DocumentaryFooter :text="footer.text || 'Kristel Córdoba Carrillo, Liberia, Guanacaste.'" />
+                <DocumentaryFooter
+                    :text="footer.text || 'Kristel Córdoba Carrillo, Liberia, Guanacaste - Mini documental interactivo'" />
             </div>
         </template>
     </main>

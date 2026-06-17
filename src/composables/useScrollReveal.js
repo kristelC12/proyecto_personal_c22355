@@ -8,6 +8,7 @@ export function useScrollReveal(callback) {
   onMounted(() => {
     window.addEventListener('scroll', handleScroll, { passive: true })
     window.addEventListener('resize', handleScroll)
+    handleScroll()
   })
 
   onBeforeUnmount(() => {
