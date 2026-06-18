@@ -52,7 +52,7 @@ const loadDocumentary = async () => {
   loading.value = true
   error.value = ''
   try {
-    const response = await fetch('/data/documentary.json')
+    const response = await fetch(`${import.meta.env.BASE_URL}data/documentary.json`)
     if (!response.ok) throw new Error(`No se pudo cargar el JSON (${response.status})`)
     const data = await response.json()
     documentary.value = data
