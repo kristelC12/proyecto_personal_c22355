@@ -1,12 +1,11 @@
 <script setup>
 import { computed, nextTick, onMounted, reactive, ref } from 'vue'
-import DocumentaryAudio from '../components/documentary/content/DocumentaryAudio.vue'
 import DocumentaryFooter from '../components/documentary/layout/DocumentaryFooter.vue'
 import DocumentaryHero from '../components/documentary/layout/DocumentaryHero.vue'
 import DocumentarySection from '../components/documentary/content/DocumentarySection.vue'
 import { useScrollReveal } from '../composables/useScrollReveal'
 import DocumentaryNav from '../components/documentary/layout/DocumentaryNav.vue'
-import TimelineSection from '../components/documentary/content/TimelineSection.vue'
+import CoffeeFarmExplorer from '../components/documentary/content/CoffeeFarmExplorer.vue'
 import ImmersiveVideo from '../components/documentary/inmersive/ImmersiveVideo.vue'
 import StatsCounter from '../components/documentary/inmersive/StatsCounter.vue'
 import CoffeeFacts from '../components/documentary/content/CoffeeFacts.vue'
@@ -89,7 +88,6 @@ const hero = computed(() => documentary.value?.hero ?? {})
 const title = computed(() => documentary.value?.title ?? 'Mini documental')
 const subtitle = computed(() => documentary.value?.subtitle ?? '')
 const footer = computed(() => documentary.value?.footer ?? {})
-const timeline = computed(() => documentary.value?.timeline ?? [])
 const facts = computed(() => documentary.value?.facts ?? [])
 const stats = computed(() => documentary.value?.stats ?? [])
 const immersiveVideo = computed(() => {
@@ -99,19 +97,25 @@ const immersiveVideo = computed(() => {
 
   switch (activeSection.value) {
     case 1:
-      return videos.historia
-
-    case 2:
       return videos.cultivo
 
+    case 2:
+      return videos.tostadora
+
     case 3:
-      return videos.recoleccion
+      return videos.taza
 
     case 4:
-      return videos.beneficiado
+      return videos.plantacion
+
+    case 5:
+      return videos.chorreado
+
+    case 6:
+      return videos.paisaje
 
     default:
-      return videos.hero
+      return videos.granos
   }
 })
 </script>
@@ -137,7 +141,7 @@ const immersiveVideo = computed(() => {
         :title="title"
         :subtitle="subtitle"
         :video-src="hero.videoSrc"
-        :poster="hero.poster || ''"
+        :poster="hero.poster"
       />
 
       <!-- SECCIONES -->
@@ -163,17 +167,17 @@ const immersiveVideo = computed(() => {
             :alt="section.img?.alt"
             :content="section.content"
             :highlight="section.highlight"
-          />
-
-          <DocumentaryAudio
-            :title="section.title"
-            :description="section.audio?.description || section.highlight"
-            :src="section.audio?.src"
+            :image-info="section.img"
+            :audio="section.audio"
           />
         </div>
 
         <!-- Línea de tiempo después de la primera sección -->
-        <TimelineSection v-if="index === 0" :timeline="timeline" />
+        <CoffeeFarmExplorer
+          v-if="index === 0"
+          :image="documentary.farmExplorer.image"
+          :hotspots="documentary.farmExplorer.hotspots"
+        />
 
         <!-- Curiosidades junto a la sección 4 -->
         <CoffeeFacts v-if="index === 3" :facts="facts" />

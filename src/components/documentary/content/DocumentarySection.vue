@@ -1,10 +1,14 @@
 <script setup>
+import DocumentaryAudio from './DocumentaryAudio.vue'
+
 defineProps({
   index: { type: Number, required: true },
   title: { type: String, required: true },
   content: { type: String, required: true },
   highlight: { type: String, default: '' },
   image: { type: String, default: '' },
+  imageInfo: { type: Object, default: null },
+  audio: { type: Object, default: null },
 })
 </script>
 
@@ -15,10 +19,29 @@ defineProps({
       <h2>{{ title }}</h2>
       <p>{{ content }}</p>
       <p v-if="highlight" class="highlight">{{ highlight }}</p>
+      <DocumentaryAudio
+        v-if="audio"
+        :title="title"
+        :description="audio.description || highlight"
+        :src="audio.src"
+      />
     </div>
 
-    <div v-if="image" class="documentary-section__media">
-      <img :src="image" :alt="title" />
+    <div v-if="image" class="interactive-card documentary-section__media">
+      <div class="card-inner">
+        <!-- FRENTE: imagen -->
+        <div class="card-face card-front">
+          <img :src="image" :alt="title" />
+        </div>
+
+        <!-- REVERSO: info -->
+        <div class="card-face card-back">
+          <div v-if="imageInfo" class="card-back__content">
+            <h4>{{ imageInfo.factTitle }}</h4>
+            <p>{{ imageInfo.factText }}</p>
+          </div>
+        </div>
+      </div>
     </div>
   </article>
 </template>
@@ -32,12 +55,10 @@ defineProps({
   margin: 0 auto;
 }
 
-/* Tarjeta de texto "glass" */
 .documentary-section__text {
   flex: 1;
   position: relative;
   padding: 2.5rem 2.75rem;
-
   background: rgba(20, 12, 8, 0.55);
   backdrop-filter: blur(14px) saturate(140%);
   -webkit-backdrop-filter: blur(14px) saturate(140%);
@@ -81,19 +102,51 @@ defineProps({
   color: #fff !important;
 }
 
-/* Imagen con marco suave */
+.documentary-section--reverse {
+  flex-direction: row-reverse;
+}
+
+/* ── Contenedor de la carta ── */
 .documentary-section__media {
   width: 380px;
   max-width: 45%;
   flex-shrink: 0;
-  height: 100%;
   border-radius: 18px;
   overflow: hidden;
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
   border: 1px solid rgba(255, 255, 255, 0.12);
 }
 
-.documentary-section__media img {
+.interactive-card {
+  perspective: 1200px;
+  cursor: pointer;
+}
+
+/* ── Motor del flip ── */
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+}
+
+.interactive-card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+/* ── Caras compartidas ── */
+.card-face {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+/* ── Frente ── */
+.card-front img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -101,14 +154,36 @@ defineProps({
   transition: transform 0.6s ease;
 }
 
-.documentary-section__media:hover img {
+.interactive-card:hover .card-front img {
   transform: scale(1.05);
 }
 
-.documentary-section--reverse {
-  flex-direction: row-reverse;
+/* ── Reverso ── */
+.card-back {
+  transform: rotateY(180deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: rgba(20, 12, 8, 0.92);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(199, 154, 91, 0.3);
 }
 
+.card-back__content h4 {
+  font-size: 1.3rem;
+  color: var(--secondary-color, #c79a5b);
+  margin-bottom: 0.75rem;
+  line-height: 1.3;
+}
+
+.card-back__content p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.88);
+}
+
+/* ── Responsive ── */
 @media (max-width: 768px) {
   .documentary-section,
   .documentary-section--reverse {
@@ -122,7 +197,7 @@ defineProps({
   .documentary-section__media {
     width: 100%;
     max-width: 100%;
-    height: 260px;
+    height: 300px;
   }
 }
 </style>

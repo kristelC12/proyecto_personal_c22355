@@ -3,7 +3,7 @@
   "subtitle": "Del grano de oro a símbolo de identidad nacional",
   "hero": {
     "eyebrow": "Costa Rica",
-    "videoSrc": "video/cafe-intro.mp4"
+    "videoSrc": "video/granos.mp4"
   },
   "sections": [
     {
@@ -11,11 +11,7 @@
       "title": "El nacimiento del café en Costa Rica",
       "content": "El café llegó a Costa Rica a finales del siglo XVIII y comenzó a cultivarse de forma más amplia durante el siglo XIX. Gracias a las condiciones climáticas favorables, los suelos volcánicos y la dedicación de los agricultores, el cultivo se expandió rápidamente por el Valle Central. Con el paso de los años, el café se convirtió en uno de los pilares de la economía nacional y ayudó a conectar al país con los mercados internacionales.",
       "highlight": "El café transformó una pequeña nación agrícola en un país conectado con el comercio internacional.",
-      "img": {
-        "src": "/images/cafe-billete.jpg",
-        "alt": "Ilustración de la llegada del café a Costa Rica"
-      },
-      "parallax": "/images/cafe-billete.jpg",
+      "parallax": "/images/cafetal.jpg",
       "audio": {
         "src": "",
         "description": "Narración breve sobre la llegada y expansión del café en Costa Rica."
@@ -28,7 +24,10 @@
       "highlight": "El café fue conocido como el 'grano de oro' por su enorme aporte al desarrollo nacional.",
       "img": {
         "src": "/images/grano-oro.jpg",
-        "alt": "Ilustración del café como 'grano de oro' en la economía costarricense"
+        "alt": "Ilustración del café como 'grano de oro' en la economía costarricense",
+        "description": "Narración breve sobre la llegada y expansión del café en Costa Rica.",
+        "factTitle": "La importancia de la altitud",
+        "factText": "Los cafetos cultivados a mayor altura maduran más lentamente. Este proceso permite que el grano acumule más azúcares y compuestos aromáticos, produciendo una taza con mayor acidez, dulzor y complejidad."
       },
       "audio": {
         "src": "https://interactive-examples.mdn.mozilla.net/media/cc0-audio/t-rex-roar.mp3",
@@ -42,7 +41,9 @@
       "highlight": "Cada taza de café representa meses de trabajo y dedicación.",
       "img": {
         "src": "/images/cafe-taza.jpg",
-        "alt": "Ilustración del proceso desde el cafetal hasta la taza"
+        "alt": "Ilustración del proceso desde el cafetal hasta la taza",
+        "factTitle": "El café en la vida cotidiana",
+        "factText": "En muchos hogares costarricenses el café forma parte de la rutina diaria. Compartir una taza de café suele asociarse con hospitalidad, conversación y encuentros familiares, convirtiéndolo en un elemento importante de la identidad cultural."
       },
       "audio": {
         "src": "https://interactive-examples.mdn.mozilla.net/media/cc0-audio/t-rex-roar.mp3",
@@ -56,7 +57,9 @@
       "highlight": "Más que una bebida, el café es una expresión de la identidad costarricense.",
       "img": {
         "src": "/images/pinto-cafe.jpg",
-        "alt": "Ilustración del proceso desde el cafetal hasta la taza"
+        "alt": "Ilustración del proceso desde el cafetal hasta la taza",
+        "factTitle": "El café y la gastronomía nacional",
+        "factText": "El café acompaña algunos de los platos más representativos de Costa Rica. Su presencia en desayunos y meriendas refleja la estrecha relación entre la producción cafetalera y las costumbres alimentarias del país."
       },
       "audio": {
         "src": "https://interactive-examples.mdn.mozilla.net/media/cc0-audio/t-rex-roar.mp3",
@@ -70,7 +73,9 @@
       "highlight": "El futuro del café costarricense depende de la innovación y la sostenibilidad.",
       "img": {
         "src": "/images/cafe-exportacion.jpg",
-        "alt": "Ilustración del futuro del café en Costa Rica"
+        "alt": "Ilustración del futuro del café en Costa Rica",
+        "factTitle": "Un producto que conecta a Costa Rica con el mundo",
+        "factText": "El café costarricense se exporta a numerosos países y es especialmente apreciado en mercados especializados. Muchos compradores internacionales buscan lotes provenientes de regiones específicas debido a sus características únicas de sabor y aroma."
       },
       "audio": {
         "src": "https://interactive-examples.mdn.mozilla.net/media/cc0-audio/t-rex-roar.mp3",
@@ -84,43 +89,74 @@
       "highlight": "El café costarricense sigue siendo parte esencial de la memoria y la identidad del país."
     }
   ],
-  "timeline": [
-    {
-      "year": "1779",
-      "title": "Llegada del café",
-      "image": "/images/timeline/1779.jpg",
-      "audio": "/audio/timeline/1779.mp3",
-      "description": "Las primeras semillas de café llegaron a Costa Rica a finales del siglo XVIII, introduciendo un cultivo que transformaría la historia nacional."
-    },
-    {
-      "year": "1843",
-      "title": "Primeras exportaciones",
-      "image": "/images/timeline/1843.jpg",
-      "audio": "/audio/timeline/1843.mp3",
-      "description": "Costa Rica inició la exportación de café hacia Europa, impulsando el crecimiento económico y fortaleciendo las relaciones comerciales internacionales."
-    },
-    {
-      "year": "1900",
-      "title": "El Grano de Oro",
-      "image": "/images/timeline/1900.jpg",
-      "audio": "/audio/timeline/1900.mp3",
-      "description": "El café se convirtió en el principal motor económico del país y fue conocido como el Grano de Oro por su enorme aporte al desarrollo nacional."
-    },
-    {
-      "year": "1950",
-      "title": "Modernización cafetalera",
-      "image": "/images/timeline/1950.jpg",
-      "audio": "/audio/timeline/1950.mp3",
-      "description": "La incorporación de nuevas tecnologías permitió mejorar la producción, el procesamiento y la calidad del café costarricense."
-    },
-    {
-      "year": "2025",
-      "title": "Café de especialidad",
-      "image": "/images/timeline/2025.jpg",
-      "audio": "/audio/timeline/2025.mp3",
-      "description": "Costa Rica es reconocida mundialmente por sus cafés de especialidad, producidos con altos estándares de calidad y sostenibilidad."
-    }
-  ],
+  "farmExplorer": {
+    "image": "/images/plantacion.jpg",
+    "hotspots": [
+      {
+        "id": 1,
+        "x": "28%",
+        "y": "70%",
+        "title": "Planta de café",
+        "text": "El cafeto tarda entre 3 y 5 años en producir frutos."
+      },
+      {
+        "id": 2,
+        "x": "92%",
+        "y": "69%",
+        "title": "Cereza madura",
+        "text": "Las cerezas rojas indican que el fruto está listo para cosechar."
+      },
+      {
+        "id": 3,
+        "title": "Zona Montañosa",
+        "text": "Las montañas proporcionan el clima ideal para el cultivo de café de alta calidad.",
+        "x": "70%",
+        "y": "25%"
+      },
+      {
+        "id": 4,
+        "x": "52%",
+        "y": "62%",
+        "title": "Recolector",
+        "text": "La recolección se realiza a mano para seleccionar solo las cerezas maduras."
+      },
+      {
+        "id": 5,
+        "title": "Café cultivado bajo sombra",
+        "text": "Los árboles regulan la temperatura y la humedad del cultivo. Este método suele producir granos de mejor calidad y favorece la conservación del suelo.",
+        "x": "38%",
+        "y": "20%"
+      },
+      {
+        "id": 6,
+        "title": "La altura influye en el sabor",
+        "text": "A mayor altitud, el fruto madura más lentamente. Esto permite desarrollar sabores más complejos y una mayor concentración de azúcares naturales.",
+        "x": "60%",
+        "y": "10%"
+      },
+      {
+        "id": 7,
+        "title": "Recorrido entre cafetos",
+        "text": "Los caficultores recorren diariamente grandes extensiones de terreno para revisar el estado de las plantas, detectar plagas y evaluar la maduración de los frutos antes de la cosecha.",
+        "x": "80%",
+        "y": "60%"
+      },
+      {
+        "id": 8,
+        "x": "35%",
+        "y": "45%",
+        "title": "Un cafeto puede vivir décadas",
+        "text": "Una planta de café bien cuidada puede producir frutos durante 20 a 30 años. Algunas fincas conservan cafetos mucho más antiguos que siguen siendo productivos."
+      },
+      {
+        "id": 9,
+        "title": "Un refugio para la biodiversidad",
+        "text": "Los cafetales tradicionales albergan aves, insectos polinizadores y pequeños mamíferos. Muchas especies utilizan estas plantaciones como corredores biológicos.",
+        "x": "65%",
+        "y": "40%"
+      }
+    ]
+  },
   "facts": [
     {
       "text": "El café llegó a Costa Rica alrededor de 1779 y transformó la economía nacional."
@@ -216,23 +252,14 @@
       "label": "Porcentaje exportado"
     }
   ],
-
-  "quotes": [
-    {
-      "text": "Todo comenzó con una pequeña semilla."
-    },
-    {
-      "text": "El café construyó una nación."
-    },
-    {
-      "text": "Cada taza cuenta una historia."
-    }
-  ],
   "immersiveVideos": {
-    "historia": "/video/historia.mp4",
+    "granos": "/video/granos.mp4",
     "cultivo": "/video/cultivo.mp4",
-    "recoleccion": "/video/recoleccion.mp4",
-    "beneficiado": "/video/beneficiado.mp4"
+    "chorreado": "/video/chorreado.mp4",
+    "plantacion": "/video/plantacion.mp4",
+    "tostadora": "/video/tostadora.mp4",
+    "taza": "/video/taza.mp4",
+    "paisaje": "/video/paisaje.mp4"
   },
   "footer": {
     "text": "Universidad de Costa Rica - Sede de Guanacaste",

@@ -1,16 +1,18 @@
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, onUnmounted } from 'vue'
 
 const props = defineProps({
   stats: {
     type: Array,
-    default: () => []
-  }
+    default: () => [],
+  },
 })
 
 const animatedValues = ref([])
+const sectionRef = ref(null)
+let observer = null
 
-onMounted(() => {
+const startCounting = () => {
   props.stats.forEach((stat, index) => {
     animatedValues.value[index] = 0
 
@@ -25,16 +27,36 @@ onMounted(() => {
       }
     }, 20)
   })
+}
+
+onMounted(() => {
+  animatedValues.value = props.stats.map(() => 0)
+
+  observer = new IntersectionObserver(
+    ([entry]) => {
+      if (entry.isIntersecting) {
+        startCounting()
+        observer.disconnect()
+      }
+    },
+    { threshold: 0.3 },
+  )
+
+  if (sectionRef.value) {
+    observer.observe(sectionRef.value)
+  }
+})
+
+onUnmounted(() => {
+  observer?.disconnect()
 })
 </script>
 
 <template>
-  <section class="stats-section">
-
+  <section ref="sectionRef" class="stats-section">
     <h2>El café en cifras</h2>
 
     <div class="stats-grid">
-
       <div v-for="(stat, index) in stats" :key="stat.label" class="stat-card">
         <span class="number">
           {{ Math.floor(animatedValues[index] || 0) }}
@@ -42,9 +64,7 @@ onMounted(() => {
 
         <p>{{ stat.label }}</p>
       </div>
-
     </div>
-
   </section>
 </template>
 
@@ -56,6 +76,7 @@ onMounted(() => {
 .stats-section h2 {
   text-align: center;
   margin-bottom: 4rem;
+  color: var(--secondary-color, #c79a5b);
 }
 
 .stats-grid {
@@ -68,7 +89,7 @@ onMounted(() => {
   text-align: center;
   padding: 2rem;
   border-radius: 20px;
-  background: rgba(255, 255, 255, .9);
+  background: rgba(255, 255, 255, 0.9);
 }
 
 .number {

@@ -5,10 +5,46 @@
 ### Hero - Fondo principal
 
 - **Descripción:** Video de granos de café
-- **Fuente:** Pexels
-- **URL:** https://www.pexels.com/es-es/download/video/34695412/
-- **Licencia:** Pexels License (uso libre, sin atribución obligatoria)
+- **Fuente:** Pixabay
+- **URL:** https://pixabay.com/videos/coffee-beans-caffeine-coffee-shop-45358/
+- **Licencia:** Pixabal License (uso libre, sin atribución obligatoria)
 - **Uso en proyecto:** Video de fondo en la sección Hero
+
+- **Descripción:** Video de cultivo de café
+- **Fuente:** Pexels
+- **URL:** https://www.pexels.com/video/lush-coffee-plantation-in-costa-rica-34695412/
+- **Licencia:** Pexels License (uso libre, sin atribución obligatoria)
+- **Uso en proyecto:** Video de fondo en la sección 1
+
+- **Descripción:** Video de granos de café en tostadora
+- **Fuente:** Pixabay
+- **URL:** https://pixabay.com/videos/grains-coffee-toasted-roasted-86112/
+- **Licencia:** Pixabal License (uso libre, sin atribución obligatoria)
+- **Uso en proyecto:** Video de fondo en la sección 2
+
+- **Descripción:** Video de café siendo servido
+- **Fuente:** Mixkit
+- **URL:** https://assets.mixkit.co/videos/43941/43941-720.mp4
+- **Licencia:** Mixkit License (uso libre, sin atribución obligatoria)
+- **Uso en proyecto:** Video de fondo en la sección 3
+
+- **Descripción:** Video de plantación de café
+- **Fuente:** Pixabay
+- **URL:** https://pixabay.com/videos/linear-interior-nature-field-agro-286775/
+- **Licencia:** Pixabal License (uso libre, sin atribución obligatoria)
+- **Uso en proyecto:** Video de fondo en la sección 4
+
+- **Descripción:** Video de técnica de hacer café
+- **Fuente:** Pixabay
+- **URL:** https://pixabay.com/videos/caffeine-coffee-brew-cappuccino-209419/
+- **Licencia:** Pixabal License (uso libre, sin atribución obligatoria)
+- **Uso en proyecto:** Video de fondo en la sección 5
+
+- **Descripción:** Video de paisaje de Costa Rica
+- **Fuente:** Pixabay
+- **URL:** https://pixabay.com/videos/sunset-beach-ocean-dominical-158105/
+- **Licencia:** Pixabal License (uso libre, sin atribución obligatoria)
+- **Uso en proyecto:** Video de fondo en la sección 6
 
 ---
 
@@ -24,10 +60,10 @@
 
 ### Imagen 2
 
-- **Descripción:** Granso de café en hojas verdes sobre mesa de madera
-- **Fuente:** Unsplash
-- **URL:** https://unsplash.com/es/fotos/un-par-de-hojas-verdes-sobre-una-mesa-de-madera-HULaYKMyZV8
-- **Licencia:** Unsplash License (uso libre, sin atribución obligatoria)
+- **Descripción:** Plantación de Café
+- **Fuente:** Wikimedia
+- **URL:** https://unsplash.com/es/fotos/hombre-caminando-en-la-pasarela-junto-a-las-plantas-vbi3LFdaQtI
+- **Licencia:** Wikimedia License (uso libre, sin atribución obligatoria)
 - **Uso en proyecto:** Sección 1
 
 ### Imagen 3
