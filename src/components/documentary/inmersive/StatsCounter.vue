@@ -71,6 +71,8 @@ onUnmounted(() => {
 <style scoped>
 .stats-section {
   padding: 8rem 2rem;
+  margin: 0 auto;
+  box-sizing: border-box;
 }
 
 .stats-section h2 {
@@ -96,5 +98,25 @@ onUnmounted(() => {
   display: block;
   font-size: 3rem;
   font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .stats-section {
+    padding: 5rem 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .stats-section {
+    padding: 3.5rem 1rem;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .number {
+    font-size: 2.25rem;
+  }
 }
 </style>

@@ -11,11 +11,7 @@
       "title": "El nacimiento del café en Costa Rica",
       "content": "El café llegó a Costa Rica a finales del siglo XVIII y comenzó a cultivarse de forma más amplia durante el siglo XIX. Gracias a las condiciones climáticas favorables, los suelos volcánicos y la dedicación de los agricultores, el cultivo se expandió rápidamente por el Valle Central. Con el paso de los años, el café se convirtió en uno de los pilares de la economía nacional y ayudó a conectar al país con los mercados internacionales.",
       "highlight": "El café transformó una pequeña nación agrícola en un país conectado con el comercio internacional.",
-      "parallax": "/images/cafetal.jpg",
-      "audio": {
-        "src": "",
-        "description": "Narración breve sobre la llegada y expansión del café en Costa Rica."
-      }
+      "parallax": "/images/cafetal.jpg"
     },
     {
       "id": 2,
@@ -28,10 +24,6 @@
         "description": "Narración breve sobre la llegada y expansión del café en Costa Rica.",
         "factTitle": "La importancia de la altitud",
         "factText": "Los cafetos cultivados a mayor altura maduran más lentamente. Este proceso permite que el grano acumule más azúcares y compuestos aromáticos, produciendo una taza con mayor acidez, dulzor y complejidad."
-      },
-      "audio": {
-        "src": "https://interactive-examples.mdn.mozilla.net/media/cc0-audio/t-rex-roar.mp3",
-        "description": "Narración sobre el papel del café en la economía costarricense."
       }
     },
     {
@@ -44,10 +36,6 @@
         "alt": "Ilustración del proceso desde el cafetal hasta la taza",
         "factTitle": "El café en la vida cotidiana",
         "factText": "En muchos hogares costarricenses el café forma parte de la rutina diaria. Compartir una taza de café suele asociarse con hospitalidad, conversación y encuentros familiares, convirtiéndolo en un elemento importante de la identidad cultural."
-      },
-      "audio": {
-        "src": "https://interactive-examples.mdn.mozilla.net/media/cc0-audio/t-rex-roar.mp3",
-        "description": "Narración del recorrido productivo desde el cafetal hasta la taza."
       }
     },
     {
@@ -60,10 +48,6 @@
         "alt": "Ilustración del proceso desde el cafetal hasta la taza",
         "factTitle": "El café y la gastronomía nacional",
         "factText": "El café acompaña algunos de los platos más representativos de Costa Rica. Su presencia en desayunos y meriendas refleja la estrecha relación entre la producción cafetalera y las costumbres alimentarias del país."
-      },
-      "audio": {
-        "src": "https://interactive-examples.mdn.mozilla.net/media/cc0-audio/t-rex-roar.mp3",
-        "description": "Narración sobre las costumbres y tradiciones alrededor del café."
       }
     },
     {
@@ -76,10 +60,6 @@
         "alt": "Ilustración del futuro del café en Costa Rica",
         "factTitle": "Un producto que conecta a Costa Rica con el mundo",
         "factText": "El café costarricense se exporta a numerosos países y es especialmente apreciado en mercados especializados. Muchos compradores internacionales buscan lotes provenientes de regiones específicas debido a sus características únicas de sabor y aroma."
-      },
-      "audio": {
-        "src": "https://interactive-examples.mdn.mozilla.net/media/cc0-audio/t-rex-roar.mp3",
-        "description": "Narración sobre sostenibilidad, innovación y futuro del café."
       }
     },
     {
@@ -116,7 +96,7 @@
       {
         "id": 4,
         "x": "52%",
-        "y": "62%",
+        "y": "67%",
         "title": "Recolector",
         "text": "La recolección se realiza a mano para seleccionar solo las cerezas maduras."
       },

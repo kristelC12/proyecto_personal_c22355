@@ -8,15 +8,14 @@ defineProps({
 </script>
 
 <template>
-  <transition name="video-fade" mode="out-in">
-    <div :key="src" class="immersive-video">
+  <Transition name="video-fade" mode="out-in">
+    <div :key="src" class="immersive-video" aria-hidden="true">
       <video autoplay muted loop playsinline>
         <source :src="src" type="video/mp4" />
       </video>
-
-      <div class="overlay"></div>
+      <div class="overlay" />
     </div>
-  </transition>
+  </Transition>
 </template>
 
 <style scoped>
@@ -38,13 +37,13 @@ defineProps({
   background: rgba(0, 0, 0, 0.55);
 }
 
-.video-fade-enter-active,
-.video-fade-leave-active {
-  transition: opacity 1s ease;
-}
-
 .video-fade-enter-from,
 .video-fade-leave-to {
   opacity: 0;
+}
+
+.video-fade-enter-active,
+.video-fade-leave-active {
+  transition: opacity 1s ease;
 }
 </style>

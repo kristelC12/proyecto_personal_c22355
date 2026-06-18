@@ -12,15 +12,16 @@ defineProps({
 </script>
 
 <template>
-  <nav class="documentary-nav">
+  <nav class="documentary-nav" aria-label="Navegación de secciones">
     <div class="nav-track">
       <a
         v-for="section in sections"
         :key="section.id"
         :href="`#section-${section.id}`"
         :class="{ active: activeSection === section.id }"
+        :aria-current="activeSection === section.id ? 'true' : undefined"
       >
-        <span class="dot"></span>
+        <span class="dot" aria-hidden="true" />
         <span class="label">{{ section.title }}</span>
       </a>
     </div>
@@ -43,7 +44,6 @@ defineProps({
   align-items: center;
   gap: 0.4rem;
   padding: 0.5rem 0.6rem;
-
   background: rgba(20, 12, 8, 0.55);
   backdrop-filter: blur(14px) saturate(140%);
   -webkit-backdrop-filter: blur(14px) saturate(140%);
@@ -59,14 +59,12 @@ defineProps({
   display: inline-flex;
   align-items: center;
   gap: 0.45rem;
-
   text-decoration: none;
   color: rgba(255, 255, 255, 0.75);
   font-size: 0.85rem;
   font-weight: 500;
   letter-spacing: 0.2px;
   white-space: nowrap;
-
   padding: 0.5rem 0.95rem;
   border-radius: 999px;
   transition:
@@ -75,12 +73,12 @@ defineProps({
     transform 0.25s ease;
 }
 
-/* Puntito indicador a la izquierda del texto */
 .dot {
   width: 6px;
   height: 6px;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.35);
+  flex-shrink: 0;
   transition:
     background 0.3s ease,
     transform 0.3s ease,
@@ -114,7 +112,6 @@ defineProps({
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
 }
 
-/* Animación de "pulso" en el activo */
 .documentary-nav a.active .dot::after {
   content: '';
   position: absolute;
@@ -137,9 +134,9 @@ defineProps({
   }
 }
 
-/* TABLET / MÓVIL: solo puntos, sin texto */
+/* TABLET / MÓVIL: solo puntos */
 @media (max-width: 900px) {
-  .documentary-nav .label {
+  .label {
     display: none;
   }
 
