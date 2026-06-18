@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "deploy": "gh-pages -d dist",
     "preview": "vite preview",
     "test:unit": "vitest",
     "lint": "run-s lint:*",
@@ -27,6 +28,7 @@
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-oxlint": "~1.60.0",
     "eslint-plugin-vue": "~10.8.0",
+    "gh-pages": "^6.3.0",
     "globals": "^17.5.0",
     "jsdom": "^29.0.2",
     "npm-run-all2": "^8.0.4",
